@@ -74,16 +74,9 @@ def build_pages(content_dir)
   end
 end
 
-def clean_html_file(file_path)
-  content = File.read(file_path)
-  cleaned_content = content.gsub(/^\s*$(?:\n|\r\n)?/, '') # Remove blank lines
-  beautified_content = HtmlBeautifier.beautify(cleaned_content)
-  File.write(file_path, beautified_content)
-end
-
-def clean_html_files_in_directory(directory)
-  Dir.glob("#{directory}/**/*.html").each do |file|
-    clean_html_file(file)
+def clean_html_files
+  Dir.glob("site/*.html").each do |file_path|
+    File.write(file_path, HtmlBeautifier.beautify(File.read(file_path)))
   end
 end
 
@@ -93,7 +86,7 @@ def build_site
   build_blog_index_page
   build_pages("content/")
   build_pages("content/posts")
-  clean_html_files_in_directory('site')
+  clean_html_files
   end_time = Time.now 
   puts "Build complete | #{((end_time-start_time).to_f * 1000).round(2)} ms."
 end
