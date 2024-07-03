@@ -1,5 +1,6 @@
 ---
 title: What I'm Doing Now
+slug: now
 ---
 
 ### Last updated on July 2nd, 2024 from my dining room table in Eureka, CA.

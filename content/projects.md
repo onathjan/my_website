@@ -1,5 +1,6 @@
 ---
 title: Projects
+slug: projects
 ---
 
 ## <a href="#">Rescue Plan App</a>

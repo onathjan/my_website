@@ -28,38 +28,36 @@ def copy_assets
 end
 
 def build_blog_index_page
-  posts = {}
+  posts = []
 
   Dir.glob("content/posts/*md").each do |file|
-    title = read_front_matter(file).first.values.first
-    url = "posts/#{File.basename(file, '.md')}.html"
-    posts[url] = title
+    front_matter, _ = read_front_matter(file)
+    slug = front_matter['slug']
+    title = front_matter['title']
+    date = file[0..9]
+    url = "posts/#{slug}.html"
+    posts << { date: date, title: title, url: url }
   end
 
-  File.open("content/blog.md", 'w') do |file|
-    file.puts "---"
-    file.puts "title: Posts"
-    file.puts "---"
+  posts.sort_by! { |post| post[:date] }.reverse!
+
+  blog_content = <<~BLOG
+    ---
+    title: Posts
+    slug: blog
+    ---
+  BLOG
+
+  posts.each do |post|
+    blog_content << "- [#{post[:title]}](#{post[:url]})\n"
   end
 
-  posts.sort.reverse.each do |url, title|
-    File.open('content/blog.md', 'a') do |file|
-      file.puts "- [#{title}](#{url})"
-    end
-  end
+  blog_content << "{:.posts}"
 
-  File.open('content/blog.md', 'a') do |file|
-    file.puts "{:.posts}"
-  end
+  File.write("content/blog.md", blog_content)
 end
 
-def build_main_pages
-  FileUtils.mkdir_p('site')
-  
-  content_dir = 'content'
-  output_dir = 'site'
-  template_file = 'templates/layout.liquid'
-  
+def build_pages(content_dir, output_dir)
   Dir.glob("#{content_dir}/*.md").each do |file|
     front_matter, body = read_front_matter(file)
     html_content = process_markdown(body)
@@ -69,57 +67,23 @@ def build_main_pages
       'date' => front_matter['date'],
       'content' => html_content
     }
-    
-    rendered_content = render_template(template_file, assigns)
-    
-    output_file = File.join(output_dir, File.basename(file, '.md') + '.html')
-    File.write(output_file, rendered_content)
-  end
-end
 
-def build_blog_posts
-  FileUtils.mkdir_p('site/posts')
-  
-  content_dir = 'content/posts'
-  output_dir = 'site/posts'
-  template_file = 'templates/layout.liquid'
-  
-  Dir.glob("#{content_dir}/*.md").each do |file|
-    front_matter, body = read_front_matter(file)
-    html_content = process_markdown(body)
+    assigns['blog_post'] = true if content_dir.include?('posts')
     
-    assigns = {
-      'title' => front_matter['title'],
-      'date' => front_matter['date'],
-      'content' => html_content,
-      'blog_post' => true
-    }
-    
-    rendered_content = render_template(template_file, assigns)
-    
-    output_file = File.join(output_dir, File.basename(file, '.md') + '.html')
+    rendered_content = render_template("templates/layout.liquid", assigns)
+    output_file = "#{output_dir}/#{front_matter['slug']}.html"
     File.write(output_file, rendered_content)
   end
 end
 
 def build_site
   start_time = Time.now
-  puts "Starting build"
-  sleep(0.1)
   copy_assets
-  puts "Copying assets to site directory"
-  sleep(0.1)
   build_blog_index_page
-  puts "Building blog index"
-  sleep(0.1)
-  build_main_pages
-  puts "Building main pages"
-  sleep(0.1)
-  build_blog_posts
-  puts "Building blog posts"
-  sleep(0.1)
+  build_pages("content/", "site/")
+  build_pages("content/posts", "site/posts")
   end_time = Time.now 
-  puts "Build complete | #{((end_time-start_time).to_f * 1000 - 400).round(2)} ms."
+  puts "Build complete | #{((end_time-start_time).to_f * 1000).round(2)} ms."
 end
 
 build_site

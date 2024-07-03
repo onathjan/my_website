@@ -17,10 +17,14 @@ date = DateTime.now
 file = "content/posts/#{date.strftime "%Y-%m-%d"}-#{cleaned_title}.md"
 
 File.open(file, 'a') do |file|
-  file.puts "---"
-  file.puts "title: #{title}"
-  file.puts "date: #{date.strftime("%B #{ordinal_suffix(date.day)}, %Y")}"
-  file.puts "---"
-  file.puts "\n"
+  file.puts <<~TEXT
+    ---
+    title: #{title}
+    date: #{date.strftime("%B #{ordinal_suffix(date.day)}, %Y")}
+    url:
+    ---
+
+  TEXT
 end
+
 system("code #{file}")

@@ -1,8 +1,9 @@
 ---
 title: Things I Use
+slug: uses
 ---
 
-### Last updated on June 25th, 2024
+### Last updated on July 3rd, 2024
 
 ## Hardware
 - <a href="https://support.apple.com/en-us/111952" target="_blank">iPhone 6S</a> (yes it's old – no I won't upgrade)

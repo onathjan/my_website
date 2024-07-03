@@ -1,7 +1,9 @@
 ---
 title: Posts
+slug: blog
 ---
-- [Heather is my best friend!!!](posts/2024-07-02-heather-is-my-best-friend.html)
-- [Gloomy weather](posts/2024-02-21-gloomy-weather.html)
-- [Merry Christmas!](posts/2023-12-25-merry-christmas.html)
+- [Happy fourth!](posts/happy-fourth.html)
+- [Stop and smell the roses](posts/roses.html)
+- [Hello, world!](posts/hello.html)
+- [Merry crimbo!](posts/merry-christmas.html)
 {:.posts}
