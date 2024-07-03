@@ -2,8 +2,9 @@
 title: Posts
 slug: blog
 ---
-- [Happy fourth!](posts/happy-fourth.html)
-- [Stop and smell the roses](posts/roses.html)
-- [Hello, world!](posts/hello.html)
-- [Merry crimbo!](posts/merry-christmas.html)
+- [Beautification test file](beauty.html)
+- [Happy fourth!](happy-fourth.html)
+- [Stop and smell the roses](roses.html)
+- [Hello, world!](hello.html)
+- [Merry crimbo!](merry-christmas.html)
 {:.posts}

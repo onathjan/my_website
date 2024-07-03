@@ -21,7 +21,7 @@ File.open(file, 'a') do |file|
     ---
     title: #{title}
     date: #{date.strftime("%B #{ordinal_suffix(date.day)}, %Y")}
-    url:
+    slug: replace-me
     ---
 
   TEXT

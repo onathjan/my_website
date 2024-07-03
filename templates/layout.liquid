@@ -1,53 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% if blog_post %}
-  <link rel="stylesheet" type="text/css" href="../assets/styles.css" />
-  {% else %}
-  <link rel="stylesheet" type="text/css" href="assets/styles.css" />
-  {% endif %}
-  <title>{{ title }} | Jonathan Christian</title>
-</head>
-<body>
-  <header>
-    {% if blog_post %}
-    <h1>Jonathan Christian</h1>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../now.html">Now</a></li>
-        <li><a href="../projects.html">Projects</a></li>
-        <li><a href="../uses.html">Uses</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-      </ul>
-    </nav>
-    {% else %}
-    <h1>Jonathan Christian</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="now.html">Now</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="uses.html">Uses</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-    </nav>
-    {% endif %}
-  </header>
-  <main>
-    {% if title != "Home" %}
-      <h1>{{ title }}</h1>
-    {% endif %}
-    {% if date %}
-    <h3>{{ date }}</h3>
-    {% endif %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/styles.css" />
+    <title>Things I Use | Jonathan Christian</title>
+  </head>
+  <body>
+    <header>
+      <h1>Jonathan Christian</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="now.html">Now</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="uses.html">Uses</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      {% if title != "Home" %}
+        <h1>{{ title }}</h1>
+      {% endif %}
 
-    {{ content }}
-  </main>
-  <footer>
-    <p>&copy; 2024 Jonathan Christian. All rights reserved.</p>
-  </footer>
-</body>
+      {% if date %}
+        <h3>{{ date }}</h3>
+      {% endif %}
+      
+      {{ content }}
+    </main>
+    <footer>
+      <p>&copy; 2024 Jonathan Christian. All rights reserved.</p>
+    </footer>
+  </body>
 </html> 
