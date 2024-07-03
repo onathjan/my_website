@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    kramdown (2.4.0)
+      rexml
+    liquid (5.5.0)
+    rexml (3.3.1)
+      strscan
+    strscan (3.1.0)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  kramdown
+  liquid
+
+RUBY VERSION
+   ruby 3.1.2p20
+
+BUNDLED WITH
+   2.4.10
