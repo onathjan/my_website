@@ -33,11 +33,10 @@ def build_blog_index_page
 
   Dir.glob("content/posts/*md").each do |file|
     front_matter, _ = read_front_matter(file)
-    slug = front_matter['slug']
+    slug = front_matter['slug'] + ".html"
     title = front_matter['title']
     date = file[0..9]
-    url = "#{slug}.html"
-    posts << { date: date, title: title, url: url }
+    posts << { date: date, title: title, slug: slug }
   end
 
   posts.sort_by! { |post| post[:date] }.reverse!
@@ -50,7 +49,7 @@ def build_blog_index_page
   BLOG
 
   posts.each do |post|
-    blog_content << "- [#{post[:title]}](#{post[:url]})\n"
+    blog_content << "- [#{post[:title]}](#{post[:slug]})\n"
   end
 
   blog_content << "{:.posts}"
