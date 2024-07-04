@@ -4,7 +4,7 @@ slug: blog
 ---
 
 # Posts
-- [Beautification test file](beauty)
+- [All about redwoods](redwoods)
 - [Happy fourth!](happy-fourth)
 - [Stop and smell the roses](roses)
 - [Hello, world!](hello)

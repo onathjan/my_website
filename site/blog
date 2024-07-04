@@ -22,7 +22,7 @@
     <main>
       <h1>Posts</h1>
       <ul class="posts">
-        <li><a href="beauty">Beautification test file</a></li>
+        <li><a href="redwoods">All about redwoods</a></li>
         <li><a href="happy-fourth">Happy fourth!</a></li>
         <li><a href="roses">Stop and smell the roses</a></li>
         <li><a href="hello">Hello, world!</a></li>

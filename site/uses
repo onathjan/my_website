@@ -33,7 +33,7 @@
       <ul>
         <li><a href="https://www.mozilla.org/en-US/firefox/" target="_blank">Firefox</a> browser with <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a></li>
         <li><a href="https://rubyonrails.org/" target="_blank">Ruby on Rails</a> for web development</li>
-        <li><a href="https://obsidian.md/" target="_blank">Obsidian</a> for note taking. While not technically open source, Obsidian is ran by a small team and most of the code is free to view online. They make an amazing product that doesn’t lock you into an ecosystem.</li>
+        <li><a href="https://obsidian.md/" target="_blank">Obsidian</a> for note taking. While not technically open source, Obsidian is ran by a small team and most of the code is free to view online. They make an amazing product that doesn’t lock you into an ecosystem. If they ever go out of business, I still have all of my notes locally on my machine as markdown files.</li>
         <li><a href="https://www.todoist.com" target="_blank">Todoist</a> for task management. I’d 
           like to find or make something open source and switch to that 
           eventually</li>
