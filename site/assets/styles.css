@@ -1,7 +1,7 @@
 body {
   display: grid;
-  font: 18px/1.6 Arial, sans-serif;
-  grid-template-columns: minmax(auto, 70ch);
+  font: 20px/1.6 Arial, sans-serif;
+  grid-template-columns: minmax(auto, 65ch);
   grid-template-rows: auto 1fr;
   justify-content: center;
   min-height: 100vh;
@@ -130,4 +130,10 @@ footer {
   a:hover, nav ul li a:hover {
     color: #32c7ff;
   }
+}
+
+@media (max-width: 450px) {
+  body { 
+    font: 18px/1.6 Arial, sans-serif;
+  };
 }
