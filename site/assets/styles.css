@@ -1,7 +1,7 @@
 body {
   display: grid;
-  font: 20px/1.6 Arial, sans-serif;
-  grid-template-columns: minmax(auto, 65ch);
+  font: 18px/1.6 Arial, sans-serif;
+  grid-template-columns: minmax(auto, 70ch);
   grid-template-rows: auto 1fr;
   justify-content: center;
   min-height: 100vh;
