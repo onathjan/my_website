@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/styles.css" />
     {% if title == "Home" %}
-      <title> Jonathan Christian </title>
+      <title>Jonathan Christian</title>
     {% else %}
       <title> {{title }} | Jonathan Christian</title>
     {% endif %}
@@ -35,7 +35,8 @@
       {{ content }}
     </main>
     <footer>
-      <p>&copy; {{ "now" | date: "%Y" }} Jonathan Christian. <a href="#">Subscribe via email</a> for new post notifications.</p>
+      <p><a href="#">Subscribe via email</a> for new post notifications.</p>
+      <p>&copy; {{ "now" | date: "%Y" }} Jonathan Christian.</p>
     </footer>
   </body>
 </html> 
