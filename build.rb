@@ -33,7 +33,8 @@ def build_blog_index_page
 
   Dir.glob("content/posts/*md").each do |file|
     front_matter, _ = read_front_matter(file)
-    slug = front_matter['slug'] + ".html"
+    slug = front_matter['slug'] # + ".html" 
+    # Remove the above comment if I want to return to links with .html extension
     title = front_matter['title']
     date = file[0..9]
     posts << { date: date, title: title, slug: slug }
@@ -43,9 +44,11 @@ def build_blog_index_page
 
   blog_content = <<~BLOG
     ---
-    title: Posts
+    title: Blog
     slug: blog
     ---
+
+    # Posts
   BLOG
 
   posts.each do |post|
@@ -80,6 +83,12 @@ def clean_html_files
   end
 end
 
+def remove_html_extensions
+  Dir.glob("site/*html").each do |file|
+    File.rename(file, file.delete_suffix(".html"))
+  end
+end
+
 def build_site
   start_time = Time.now
   copy_assets
@@ -87,6 +96,7 @@ def build_site
   build_pages("content/")
   build_pages("content/posts")
   clean_html_files
+  remove_html_extensions
   end_time = Time.now 
   puts "Build complete | #{((end_time-start_time).to_f * 1000).round(2)} ms."
 end
