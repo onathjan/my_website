@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/styles.css" />
-    {% if title == "Home" %}
-      <title> Jonathan Christian </title>
-    {% else %}
-      <title> {{title }} | Jonathan Christian</title>
-    {% endif %}
+    <title> Projects | Jonathan Christian</title>
   </head>
   <body>
     <header>
@@ -24,18 +20,16 @@
       </nav>
     </header>
     <main>
-      {% unless title == "Home" or title == "Blog" %}
-        <h1>{{ title }}</h1>
-      {% endunless %}
-
-      {% if date %}
-        <h3>{{ date }}</h3>
-      {% endif %}
-      
-      {{ content }}
+      <h1>Projects</h1>
+      <h2><a href="#">Rescue Plan App</a></h2>
+      <p>Rescue Plan App is a simple app that outdoor entusiats can use to 
+        make sure they get found if something happens to them out in the field.</p>
+      <h2><a href="#">Local Wild Foods</a></h2>
+      <p>This is a database search app I made that lets anyone find wild foods 
+        that occur within a specied radius around their location.</p>
     </main>
     <footer>
-      <p>&copy; {{ "now" | date: "%Y" }} Jonathan Christian. <a href="#">Subscribe via email</a> for new post notifications.</p>
+      <p>&copy; 2024 Jonathan Christian. <a href="#">Subscribe via email</a> for new post notifications.</p>
     </footer>
   </body>
 </html> 

@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/styles.css" />
-    {% if title == "Home" %}
-      <title> Jonathan Christian </title>
-    {% else %}
-      <title> {{title }} | Jonathan Christian</title>
-    {% endif %}
+    <title> Blog | Jonathan Christian</title>
   </head>
   <body>
     <header>
@@ -24,18 +20,17 @@
       </nav>
     </header>
     <main>
-      {% unless title == "Home" or title == "Blog" %}
-        <h1>{{ title }}</h1>
-      {% endunless %}
-
-      {% if date %}
-        <h3>{{ date }}</h3>
-      {% endif %}
-      
-      {{ content }}
+      <h1>Posts</h1>
+      <ul class="posts">
+        <li><a href="redwoods.html">All about redwoods</a></li>
+        <li><a href="happy-fourth.html">Happy fourth!</a></li>
+        <li><a href="roses.html">Stop and smell the roses</a></li>
+        <li><a href="hello.html">Hello, world!</a></li>
+        <li><a href="merry-christmas.html">Merry crimbo!</a></li>
+      </ul>
     </main>
     <footer>
-      <p>&copy; {{ "now" | date: "%Y" }} Jonathan Christian. <a href="#">Subscribe via email</a> for new post notifications.</p>
+      <p>&copy; 2024 Jonathan Christian. <a href="#">Subscribe via email</a> for new post notifications.</p>
     </footer>
   </body>
 </html> 
