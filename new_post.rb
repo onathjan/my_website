@@ -1,5 +1,24 @@
 require 'date'
 
+def mla_title_case(title)
+  bad_words = %w[a an the and but for nor or so yet by for from in into of off on out over through to under with]
+
+  words = title.split(' ')
+
+  words.map! do |word|
+    if bad_words.include?(word.downcase)
+      word.downcase
+    else
+      word.capitalize
+    end
+  end
+
+  words.first.capitalize!
+  words.last.capitalize!
+
+  words.join(' ')
+end
+
 def ordinal_suffix(day)
   case day
   when 1, 21, 31 then "#{day}st"
@@ -10,7 +29,7 @@ def ordinal_suffix(day)
 end
 
 puts "What's the title of your new post?"
-title = gets.chomp.capitalize
+title = mla_title_case(gets.chomp)
 cleaned_title = title.downcase.gsub(/[^a-zA-Z ]/, '').split.join("-")
 date = DateTime.now
 
