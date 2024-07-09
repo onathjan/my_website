@@ -72,10 +72,9 @@ hr {
 header {
   align-items: center;
   display: flex;
-  flex-direction: column;
   font-size: 20px;
   gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 header h1 {
@@ -149,4 +148,13 @@ footer p {
   body { 
     font: 18px/1.6 Arial, sans-serif;
   };
+
+  header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 10px;
+    justify-content: center;
+  }
 }
