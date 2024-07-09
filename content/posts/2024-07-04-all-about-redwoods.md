@@ -16,7 +16,7 @@ Coastal Redwoods are not merely tall—they are resilient and vital ecosystems i
 
 ![A Coastal Redwood Tree](assets/images/redwood.jpg)
 
-##### A coastal redwood tree in all of it's glory.
+##### A coastal redwood tree in all of its glory.
   
 ## Environmental Guardians
 
