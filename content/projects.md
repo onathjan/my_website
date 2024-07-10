@@ -9,4 +9,4 @@ Kondo is a ultra-minimalist static site generator built with Ruby. It uses a sin
 
 ## [ForageHub](https://foragehub.com)
 
-ForagerHub is a resource for learning which wild edible foods can be found around you, how to forage for them sustainably, and more. Foraging is a passion of mine and I built this tool to get more people into foraging as a means to connect with their local landscape.
+ForageHub is a resource for learning which wild edible foods can be found around you, how to forage for them sustainably, and more. Foraging is a passion of mine and I built this tool to get more people into foraging as a means to connect with their local landscape.
