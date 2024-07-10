@@ -139,7 +139,7 @@ footer p {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, h3, header h1 {
+  body, h3, .home-link {
       color: #EEE;
   }
 
@@ -147,7 +147,7 @@ footer p {
     background-color: #111;
   }
 
-  a, nav ul li a, .home-link { 
+  a, nav ul li a { 
     color: #00ACED;
   }
 
