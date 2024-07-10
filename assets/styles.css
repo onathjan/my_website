@@ -163,6 +163,10 @@ footer p {
     padding: 1rem 0.25rem;
   }
 
+  main { 
+    margin-top: 15px;
+  }
+
   header {
     flex-direction: column;
     justify-content: center;
