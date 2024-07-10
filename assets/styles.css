@@ -158,7 +158,7 @@ footer p {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 650px) {
   body { 
     font: 18px/1.6 Arial, sans-serif;
   }
