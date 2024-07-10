@@ -158,5 +158,6 @@ footer p {
     font-size: 20px;
     gap: 10px;
     justify-content: center;
+    margin: 0;
   }
 }
