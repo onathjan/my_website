@@ -76,7 +76,7 @@ header {
   font-size: 20px;
   gap: 10px;
   justify-content: space-between;
-  margin: 0 -150px 75px;
+  margin: 0 0 75px;
 }
 
 header h1 {
