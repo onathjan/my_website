@@ -3,12 +3,10 @@ title: Projects
 slug: projects
 ---
 
-## <a href="#">Rescue Plan App</a>
+## [Kondo](https://gokondo.io)
 
-Rescue Plan App is a simple app that outdoor entusiats can use to 
-make sure they get found if something happens to them out in the field.
+Kondo is a ultra-minimalist static site generator built with Ruby. It uses a single CSS stylesheet, no JavaScript, and makes self-hosting your own personal site a breeze. Kondo was conceptualized as a way to combat 500lb websites and maximalism on the web. This site is built with Kondo.
 
-## <a href="#">Local Wild Foods</a>
+## [ForagerHub](https://foragerhub.io)
 
-This is a database search app I made that lets anyone find wild foods 
-that occur within a specied radius around their location.
+ForagerHub is a resource for learning which wild edible foods can be found around you, how to forage for them sustainably, and more. Foraging is a passion of mine and I built this tool to get more people into foraging as a means to connect with their local landscape.
