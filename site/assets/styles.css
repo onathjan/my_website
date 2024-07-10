@@ -79,7 +79,6 @@ header {
   display: flex;
   flex-direction: row;
   font-size: 20px;
-  gap: 10px;
   justify-content: space-between;
 }
 
