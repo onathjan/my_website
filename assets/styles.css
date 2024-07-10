@@ -94,7 +94,6 @@ header {
 
 nav ul {
   display: flex;
-  gap: 2px;
   margin: 0;
   padding: 0;
 }
