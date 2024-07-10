@@ -145,11 +145,11 @@ footer p {
     background-color: #111;
   }
 
-  a, nav ul li a { 
+  a, nav ul li a, .home-link { 
     color: #00ACED;
   }
 
-  a:hover, nav ul li a:hover {
+  a:hover, nav ul li a:hover, .home-link:hover {
     color: #32c7ff;
   }
 }
