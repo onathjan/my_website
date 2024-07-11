@@ -1,4 +1,6 @@
 body {
+  background-color: #FCFCFC;
+  color: #121212;
   display: grid;
   font: 20px/1.6 Arial, sans-serif;
   grid-template-columns: minmax(auto, 65ch);
@@ -83,12 +85,13 @@ header {
 }
 
 .home-link {
-  color: #000;
+  color: #121212;
   font-size: 30px;
   margin: 0;
 }
 
 .home-link:hover {
+  color: #121212;
   text-decoration: none;
 }
 
@@ -124,7 +127,7 @@ footer p {
 }
 
 .copyright {
-  color: #555
+  color: #444;
 }
 
 .posts {
@@ -139,20 +142,24 @@ footer p {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, h3, .home-link {
+  body {
+    background-color: #121212;
+  }
+  
+  body, .home-link, .home-link:hover {
       color: #EEE;
   }
 
-  body {
-    background-color: #111;
-  }
-
   a, nav ul li a { 
-    color: #00ACED;
+    color: #00B8D9;
   }
 
-  a:hover, nav ul li a:hover, .home-link:hover {
-    color: #32c7ff;
+  a:hover, nav ul li a:hover { 
+    color: #008198;
+  }
+
+  .copyright {
+    color: #999;
   }
 }
 
@@ -162,12 +169,12 @@ footer p {
     padding: 1rem 0.25rem;
   }
 
-  main { 
-    margin-top: 0;
-  }
-
   header {
     flex-direction: column;
     justify-content: center;
+  }
+
+  main { 
+    margin-top: 0;
   }
 }
