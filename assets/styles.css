@@ -84,7 +84,7 @@ header {
   flex-direction: row;
   font-size: 20px;
   justify-content: space-between;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
 }
 
 .home-link {
@@ -175,5 +175,6 @@ footer p {
   header {
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 10px;
   }
 }
