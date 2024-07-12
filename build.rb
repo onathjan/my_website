@@ -33,12 +33,17 @@ def build_blog_index_page
 
   Dir.glob("content/posts/*md").each do |file|
     front_matter, _ = read_front_matter(file)
+    year = file[14..17]
+    date = file[14..23]
+    title = front_matter['title']
     slug = front_matter['slug'] + ".html" 
     # Comment out "+.'html'" if I want to return to links w/o .html extension
-    title = front_matter['title']
-    date = file[0..9]
-    posts << { date: date, title: title, slug: slug }
+    posts << { year: year, date: date, title: title, slug: slug }
   end
+
+  post_years = []
+  posts.each { |post| post_years << post.values.first }
+  post_years.uniq!
 
   posts.sort_by! { |post| post[:date] }.reverse!
 
@@ -49,13 +54,19 @@ def build_blog_index_page
     ---
 
     # Posts
+  
   BLOG
 
-  posts.each do |post|
-    blog_content << "- [#{post[:title]}](#{post[:slug]})\n"
-  end
+  post_years.reverse.each do |year|
+    blog_content << "## #{year}\n\n"
 
-  blog_content << "{:.posts}"
+    posts.each do |post|
+      if post[:year] == year
+        blog_content << "- [#{post[:title]}](#{post[:slug]})\n"
+      end
+    end
+    blog_content << "{:.posts}\n\n"
+  end
 
   File.write("content/blog.md", blog_content)
 end
