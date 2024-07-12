@@ -23,6 +23,9 @@ slug: blog
 - [New Year Outdoor Resolutions](new-year-outdoor-resolutions.html)
 {:.posts}
 
+---
+
+
 ## 2023
 
 - [Merry crimbo!](merry-christmas.html)
@@ -38,6 +41,9 @@ slug: blog
 - [Winter Photography Tips](winter-photography-tips.html)
 {:.posts}
 
+---
+
+
 ## 2022
 
 - [Harvest Moon Hikes](harvest-moon-hikes.html)
@@ -51,6 +57,9 @@ slug: blog
 - [Bird Watching in Winter](bird-watching-in-winter.html)
 - [Winter Wildlife Tracking](winter-wildlife-tracking.html)
 {:.posts}
+
+---
+
 
 ## 2021
 
@@ -68,6 +77,9 @@ slug: blog
 - [New Year Resolutions in Nature](new-year-resolutions-in-nature.html)
 {:.posts}
 
+---
+
+
 ## 2020
 
 - [Winter Wonderland Walks](winter-wonderland-walks.html)
@@ -83,6 +95,9 @@ slug: blog
 - [Winter Camping Tips](winter-camping-tips.html)
 - [New Year Hikes](new-year-hikes.html)
 {:.posts}
+
+---
+
 
 ## 2019
 

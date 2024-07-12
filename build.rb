@@ -66,7 +66,7 @@ def build_blog_index_page
       end
     end
     blog_content << "{:.posts}\n\n"
-    # blog_content << "---\n\n\n" unless year == post_years.reverse.last
+    blog_content << "---\n\n\n" unless year == post_years.reverse.last
   end
 
   File.write("content/blog.md", blog_content)
