@@ -67,9 +67,10 @@ img {
 }
 
 hr {
-  background-color: #888;
+  background-color: #CCC;
   border: none; 
   height: 1px;
+  margin: 35px 0 25px;
 }
 
 .footnotes ol {
@@ -160,6 +161,10 @@ footer p {
 
   .copyright {
     color: #B3B3B3;
+  }
+
+  hr {
+    background-color: #333;
   }
 }
 
