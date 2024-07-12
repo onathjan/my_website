@@ -7,7 +7,7 @@ body {
   grid-template-rows: auto 1fr;
   justify-content: center;
   min-height: 100vh;
-  padding: 2rem 0.25rem;
+  padding: 1.5rem 0.25rem;
 }
 
 h1 {
@@ -79,10 +79,12 @@ hr {
 
 header {
   align-items: center;
+  border-bottom: 1px solid #DDD;
   display: flex;
   flex-direction: row;
   font-size: 20px;
   justify-content: space-between;
+  padding-bottom: 2px;
 }
 
 .home-link {
@@ -110,17 +112,13 @@ nav ul li a {
   padding: 0.5rem;
 }
 
-main {
-  margin-top: 25px;
-}
-
 footer {
   align-items: center;
   display: flex;
   flex-direction: column;
   font-size: 16px;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 footer p {
@@ -177,9 +175,5 @@ footer p {
   header {
     flex-direction: column;
     justify-content: center;
-  }
-
-  main { 
-    margin-top: 0;
   }
 }
