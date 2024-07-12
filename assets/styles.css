@@ -142,7 +142,7 @@ footer p {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #121212;
+    background-color: #1b2733;
   }
   
   body, .home-link, .home-link:hover {
